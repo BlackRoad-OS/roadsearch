@@ -1,67 +1,20 @@
-# RoadSearch
+# roadsearch
 
-🔍 **Enterprise Search Engine for BlackRoad OS**
+🔍 RoadSearch - Enterprise full-text, vector & faceted search engine with AI-powered relevance tuning (10K+ lines)
 
-Full-text, vector, and faceted search with AI-powered relevance optimization.
+## Organization
 
-## Architecture
+**BlackRoad-OS** — Core platform — websites, integrations, coordination
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                     RoadSearch Engine                           │
-├─────────────────────────────────────────────────────────────────┤
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐          │
-│  │    Query     │  │   Indexer    │  │   Ranking    │          │
-│  │   Parser     │  │   Engine     │  │   Engine     │          │
-│  └──────────────┘  └──────────────┘  └──────────────┘          │
-├─────────────────────────────────────────────────────────────────┤
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐          │
-│  │   Vector     │  │   Faceted    │  │  Analyzer    │          │
-│  │   Search     │  │   Search     │  │  Pipeline    │          │
-│  └──────────────┘  └──────────────┘  └──────────────┘          │
-├─────────────────────────────────────────────────────────────────┤
-│                      AI Agents                                  │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐          │
-│  │  Relevance   │  │   Query      │  │   Index      │          │
-│  │   Tuner      │  │  Optimizer   │  │  Guardian    │          │
-│  └──────────────┘  └──────────────┘  └──────────────┘          │
-└─────────────────────────────────────────────────────────────────┘
-```
+## BlackRoad OS
 
-## Features
+BlackRoad OS is a distributed AI operating system — 20 domains, 668 repositories, 1,000 AI agents, and sovereign infrastructure running on Raspberry Pis and Hailo-8 accelerators. No cloud dependency.
 
-- **Full-Text Search**: Inverted index with BM25/TF-IDF scoring
-- **Vector Search**: Semantic similarity with HNSW index
-- **Faceted Search**: Multi-dimensional filtering with aggregations
-- **Query DSL**: Powerful query language with boolean operators
-- **Analyzers**: Tokenization, stemming, synonym expansion
-- **AI Agents**: Relevance tuning, query optimization, index maintenance
+- [blackroad.io](https://blackroad.io) — Main platform
+- [docs.blackroad.io](https://docs.blackroad.io) — Documentation
+- [GitHub](https://github.com/BlackRoad-OS) — This organization
 
-## Installation
+**Language:** Python
 
-```bash
-pip install roadsearch
-```
 
-## Quick Start
-
-```python
-from roadsearch import SearchEngine, Document
-
-# Initialize engine
-engine = SearchEngine()
-
-# Index documents
-engine.index(Document(id="1", content="BlackRoad OS infrastructure"))
-engine.index(Document(id="2", content="Enterprise search engine"))
-
-# Search
-results = engine.search("infrastructure")
-for hit in results:
-    print(f"{hit.id}: {hit.score}")
-```
-
-## License
-
-Copyright (c) 2024-2026 BlackRoad OS, Inc. All rights reserved.
-
+*© 2024-2026 BlackRoad OS, Inc. All Rights Reserved.*
